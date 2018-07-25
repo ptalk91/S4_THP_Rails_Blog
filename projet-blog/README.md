@@ -2,30 +2,30 @@
 
 Premier projet avec Rails la mif !
 
-## Gems 
+## Doc & Gems
 ActiveRecord pour gérer la database sqlite3 database, et la gem "Faker" pour donner un sens à notre database sur le fichier seed.
 
-## Notre process
+## Process
 Utiliser les Rails pour produire des classes et des migrations pour Users, Articles, .
 
 ```ruby
 $ rails generate model User
 ```
-We then filled the migration and class files.
+Puis on fignole les fichiers migration et les classes. 
 
-## Lance le projet
+## Lancer le projet
 
 ```ruby
 $ bundle install
 ```
 
-Seed the database with Faker names from the file db/seeds.rb created during the exercise
+Nourris la database avec des faker noms depuis le fichier db/seeds.rb 
 
 ```ruby
 $ rails db:seed
 ```
 
-## Architecture
+## Architecture du Doss
 5 tables dans notre DataBase:
 
 users :
@@ -63,4 +63,6 @@ Pour créer un nouvel article
 ```ruby
 > Article.create(user_id: user_id, title: "title", content: "content")
 ```
-Pour avoir accès à base de donnée, tu peux utiliser DB Browser for sqlite3
+# Pour avoir accès à base de donnée, 
+
+tu peux utiliser DB Browser for sqlite3
