@@ -1,24 +1,66 @@
-# README
+## > Da Blog Project  <
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Premier projet avec Rails la mif !
 
-Things you may want to cover:
+## Gems 
+ActiveRecord pour gérer la database sqlite3 database, et la gem "Faker" pour donner un sens à notre database sur le fichier seed.
 
-* Ruby version
+## Notre process
+Utiliser les Rails pour produire des classes et des migrations pour Users, Articles, .
 
-* System dependencies
+```ruby
+$ rails generate model User
+```
+We then filled the migration and class files.
 
-* Configuration
+## Lance le projet
 
-* Database creation
+```ruby
+$ bundle install
+```
 
-* Database initialization
+Seed the database with Faker names from the file db/seeds.rb created during the exercise
 
-* How to run the test suite
+```ruby
+$ rails db:seed
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Architecture
+5 tables dans notre DataBase:
 
-* Deployment instructions
+users :
+- first_name
+- last_name
+- email
 
-* ...
+articles :
+- title
+- content
+- user_id
+- category_id
+
+comments :
+- content
+- user_id
+- article_id
+
+categories :
+- name
+
+likes :
+- user_id
+- article_id
+
+# Depuis la console Rails
+
+Pour créer une nouvel utilisateur :
+
+```ruby
+> User.create(first_name: "name", last_name: "last_name", email: "email")
+```
+Pour créer un nouvel article
+
+```ruby
+> Article.create(user_id: user_id, title: "title", content: "content")
+```
+Pour avoir accès à base de donnée, tu peux utiliser DB Browser for sqlite3
