@@ -1,4 +1,4 @@
-## > Da Blog Project  <
+# > Da Blog Project  <
 
 Premier projet avec Rails la mif !
 
@@ -51,7 +51,7 @@ likes :
 - user_id
 - article_id
 
-# Depuis la console Rails
+## Depuis la console Rails
 
 Pour créer une nouvel utilisateur :
 
@@ -63,6 +63,6 @@ Pour créer un nouvel article
 ```ruby
 > Article.create(user_id: user_id, title: "title", content: "content")
 ```
-# Pour avoir accès à base de donnée, 
+## Pour avoir accès à base de donnée, 
 
 tu peux utiliser DB Browser for sqlite3
